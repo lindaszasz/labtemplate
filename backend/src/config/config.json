@@ -1,17 +1,17 @@
 {
   "development": {
-    "username": "dtgdqyce",
-    "password": "SZLQOYrw4jClIfwB6ZsmZ-V_JM4cte7O",
-    "database": "dtgdqyce",
-    "host": "horton.elephantsql.com",
+    "username": "postgres",
+    "password": "1q2w3e",
+    "database": "proiect-hotel-web-2017",
+    "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
   },
   "production": {
-    "username": "dtgdqyce",
-    "password": "SZLQOYrw4jClIfwB6ZsmZ-V_JM4cte7O",
-    "database": "dtgdqyce",
-    "host": "horton.elephantsql.com",
+    "username": "postgres",
+    "password": "1q2w3e",
+    "database": "proiect-hotel-web-2017",
+    "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
   }
