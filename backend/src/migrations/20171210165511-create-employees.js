@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       salary: {
-        type: Sequelize.FLOAT
+        type: Sequelize.DOUBLE
       },
       createdAt: {
         allowNull: false,
