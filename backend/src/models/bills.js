@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     id_employee: DataTypes.INTEGER,
     id_client: DataTypes.INTEGER,
     date: DataTypes.DATE,
-    amout: DataTypes.FLOAT
+    amout: DataTypes.DOUBLE
   }, {
     classMethods: {
       associate: function(models) {

@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     employment_date: DataTypes.DATE,
     role: DataTypes.STRING,
-    salary: DataTypes.FLOAT
+    salary: DataTypes.DOUBLE
   }, {
     classMethods: {
       associate: function(models) {
