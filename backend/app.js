@@ -25,14 +25,13 @@ app.use(cookieParser());
 // Controllers
 var index = require('./src/rest/index');
 var user = require('./src/rest/user');
-app.use('/api', index);
-app.use('/api/user', user);
+//var employees = require('./src/rest/employees');
+//var departments = require('./src/rest/departments');
 
-var employees = require('./src/rest/employees');
-app.use('/api/employees', employees);
-
-var departments = require('./src/rest/departments');
-app.use('/api/departments', departments);
+app.use('/', index);
+app.use('/user', user);
+//app.use('/employees', employees);
+//app.use('/departments', departments);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
