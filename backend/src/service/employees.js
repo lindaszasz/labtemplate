@@ -1,39 +1,39 @@
 "use strict";
 
-const employee = require('../models').employee;
+const employees = require('../models').employees;
 
 exports.list = function (req, res) {
-  employee.findAll().then(employee => {
-    res.jsonp(employee);
+  employees.findAll().then(employees => {
+    res.jsonp(employees);
   }).catch((error) => res.status(400).send(error));
 };
 
 exports.create = function (req, res) {
-  res.jsonp(employee.create(req.body));
+  res.jsonp(employees.create(req.body));
 };
 
 exports.findById = function (req, res) {
   let id = req.params.id;
-  employee.findById(id).then(employee => {
-    if (!employee) {
+  employees.findById(id).then(employees => {
+    if (!employees) {
       return res.status(400).send({
-        message: 'employee Not Found',
+        message: 'Employee Not Found',
       });
     }
-    res.jsonp(employee);
+    res.jsonp(employees);
   });
 };
 
 exports.delete = function (req, res) {
   let id = req.params.id;
-  employee.findById(req.params.id)
-    .then(employee => {
-      if (!employee) {
+  employees.findById(req.params.id)
+    .then(employees => {
+      if (!employees) {
         return res.status(400).send({
           message: 'Employee Not Found',
         });
       }
-      return employee
+      return employees
         .destroy()
         .then(() => res.status(204).send())
         .catch(error => res.status(400).send(error));
