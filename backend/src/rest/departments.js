@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var departments = require('../service/').departments;
+var departments = require('../service').departments;
 
 router.get('/', departments.list);
 router.get('/:id', departments.findById);

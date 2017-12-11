@@ -1,5 +1,4 @@
 "use strict";
-
 const departments = require('../models').departments;
 
 exports.list = function (req, res) {
