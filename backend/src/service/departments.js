@@ -33,9 +33,25 @@ exports.delete = function (req, res) {
         });
       }
       return departments
-        .destroy()
-        .then(() => res.status(204).send())
-        .catch(error => res.status(400).send(error));
+        
     })
     .catch(error => res.status(400).send(error));
+};
+
+exports.update = function (req, res) {
+  let id = req.params.id;
+  departments.findById(id).then(departments => {
+    if (!departments) {
+      return res.status(400).send({
+        message: 'Department Not Found',
+      });
+    }
+    departments.name = req.body.name; 
+    departments.save(function(err) {
+      if (err)
+          res.send(err);
+
+      res.json({ message: 'Department was updated!' });
+    });
+  });
 };

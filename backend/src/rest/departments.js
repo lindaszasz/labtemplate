@@ -6,4 +6,5 @@ router.get('/', departments.list);
 router.get('/:id', departments.findById);
 router.post('/', departments.create);
 router.delete('/:id', departments.delete);
+router.put('/:id', departments.update);
 module.exports = router;

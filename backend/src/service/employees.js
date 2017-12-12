@@ -40,3 +40,30 @@ exports.delete = function (req, res) {
     })
     .catch(error => res.status(400).send(error));
 };
+
+exports.update = function (req, res) {
+  let id = req.params.id;
+  employees.findById(id).then(employees => {
+    if (!employees) {
+      return res.status(400).send({
+        message: 'Employee Not Found',
+      });
+    }
+    employees.id_department = req.body.id_department ; 
+    employees.firstName = req.body.firstName ;
+    employees.lastName = req.body.lastName ;
+    employees.cnp = req.body.cnp ;
+    employees.address = req.body.address ;
+    employees.phone = req.body.phone ;
+    employees.employment_date = req.body.employment_date ;
+    employees.role = req.body.role ;
+    employees.salary = req.body.salary ;
+
+    employees.save(function(err) {
+      if (err)
+          res.send(err);
+
+      res.json({ message: 'Employee was updated!' });
+    });
+  });
+};
