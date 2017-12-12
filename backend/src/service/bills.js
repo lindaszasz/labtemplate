@@ -8,6 +8,7 @@ exports.list = function (req, res) {
 };
 
 exports.create = function (req, res) {
+    console.log(JSON.stringify(req.body))
   res.jsonp(bills.create(req.body));
 };
 
