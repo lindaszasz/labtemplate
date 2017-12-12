@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Clients = sequelize.define('Clients', {
+  var clients = sequelize.define('clients', {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     cnp: DataTypes.STRING,
@@ -14,5 +14,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return Clients;
+  return clients;
 };

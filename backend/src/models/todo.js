@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Todo = sequelize.define('Todo', {
+  var todo = sequelize.define('todo', {
     title: DataTypes.STRING
   }, {
     classMethods: {
@@ -9,5 +9,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return Todo;
+  return todo;
 };
