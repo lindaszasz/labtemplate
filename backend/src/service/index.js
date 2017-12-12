@@ -4,6 +4,7 @@ const employees = require('./employees');
 const bills = require('./bills');
 const accomodations = require('./accomodations');
 const rooms = require('./rooms');
+const clients = require('./clients');
 
 module.exports = {
   user,
@@ -11,5 +12,6 @@ module.exports = {
   departments,
   bills,
   accomodations,
-  rooms
+  rooms,
+  clients
 };

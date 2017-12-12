@@ -30,6 +30,7 @@ var departments = require('./src/rest/departments');
 var bills = require('./src/rest/bills');
 var accomodations = require('./src/rest/accomodations');
 var rooms = require('./src/rest/rooms');
+var clients = require('./src/rest/clients');
 
 app.use('/', index);
 app.use('/user', user);
@@ -38,6 +39,7 @@ app.use('/departments', departments);
 app.use('/bills', bills);
 app.use('/accomodations', accomodations);
 app.use('/rooms', rooms);
+app.use('/clients', clients);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
