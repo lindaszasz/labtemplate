@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent, UserComponent } from './components';
+import { HomeComponent, UserComponent, EmployeesComponent } from './components';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     path: 'user', component: UserComponent
+  },
+  {
+    path: 'employees', component: EmployeesComponent
   }
 ];
 

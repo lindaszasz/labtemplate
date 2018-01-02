@@ -1,13 +1,9 @@
 <!-- <div class="container">
   <p>
-    Welcome {{user}}!
+    Welcome {{employees}}!
   </p>
 </div> -->
 
-    <p-dataTable [value]="users"  selectionMode="single" [(selection)]="selectedUser" [contextMenu]="cm">
-      <p-column field="firstName" header="FirstName"  [sortable]="true"></p-column>
-      <p-column field="lastName" header="LastName" [sortable]="true"></p-column>
-      <p-column field="email" header="email" [sortable]="true"></p-column>
-    </p-dataTable>
+
 
 <p-contextMenu #cm [model]="items"></p-contextMenu>

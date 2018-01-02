@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../service/';
 import { MenuItem } from 'primeng/components/common/menuitem';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.less']
+  selector: 'app-employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.less']
 })
-export class HomeComponent implements OnInit {
-    
+export class EmployeesComponent implements OnInit {
+
+  title = 'Employees';
+
   employees: Employees[];
   selectedEmployee: Employees;
   items: MenuItem[];
@@ -30,11 +33,10 @@ export class HomeComponent implements OnInit {
     this.apiService.delete('/employees/' + select.id).subscribe(res => {
       console.log(res);
     });
-
   }
-}
 
-export interface Employees {
+}
+interface Employees {
   id: number,
   id_department: number,
   firstName: string,

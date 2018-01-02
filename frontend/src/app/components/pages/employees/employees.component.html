@@ -1,0 +1,17 @@
+
+<p-dataTable [value]="employees" selectionMode="single" [(selection)]="selectedEmployee" [contextMenu]="cm" [responsive]="true">
+  
+  <p-column field="id" header="Employee id" [sortable]="true"></p-column>
+  <p-column field="id_department" header="Department id" [sortable]="true"></p-column>
+  <p-column field="firstName" header="First Name"  [sortable]="true"></p-column>
+  <p-column field="lastName" header="Last Name" [sortable]="true"></p-column>
+  <p-column field="cnp" header="CNP" [sortable]="true"></p-column>
+  <p-column field="address" header="Address" [sortable]="true"></p-column>
+  <p-column field="phone" header="Phone"  [sortable]="true"></p-column>
+  <p-column field="employment_date" header="Employment date" [sortable]="true"></p-column>
+  <p-column field="role" header="Role" [sortable]="true"></p-column>
+  <p-column field="salary" header="Salary" [sortable]="true"></p-column>
+
+</p-dataTable>
+
+<p-contextMenu #cm [model]="items"></p-contextMenu>

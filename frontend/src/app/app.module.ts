@@ -13,10 +13,6 @@ import { DataTableModule, SharedModule } from 'primeng/primeng';
 import { ApiService } from './service';
 import { AppRoutingModule } from './app-routing.module';
 
-// Components
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components';
-
 // used to create fake backend
 import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -25,13 +21,19 @@ import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ContextMenuModule } from 'primeng/components/contextmenu/contextmenu';
+
+// Components
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components';
 import { UserComponent } from './components/pages/user/user.component';
+import { EmployeesComponent } from './components/pages/employees/employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UserComponent
+    UserComponent,
+    EmployeesComponent,
   ],
   imports: [
     AppRoutingModule,
