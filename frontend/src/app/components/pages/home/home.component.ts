@@ -7,42 +7,11 @@ import { MenuItem } from 'primeng/components/common/menuitem';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-    
-  employees: Employees[];
-  selectedEmployee: Employees;
-  items: MenuItem[];
-  constructor(private apiService: ApiService) { }
+  
+  constructor() { }
 
   ngOnInit() {
-    this.apiService.get('employees/').subscribe(res => {
-      this.employees = res;
-    });
-    this.items = [
-      { label: 'View', icon: 'fa-search', command: (event) => this.viewEmployee(this.selectedEmployee) },
-      { label: 'Delete', icon: 'fa-close', command: (event) => this.deleteEmployee(this.selectedEmployee) }
-    ];
   }
-  viewEmployee(select: Employees) {
-    console.log(JSON.stringify(select));
 
-  }
-  deleteEmployee(select: Employees) {
-    this.apiService.delete('/employees/' + select.id).subscribe(res => {
-      console.log(res);
-    });
-
-  }
 }
 
-export interface Employees {
-  id: number,
-  id_department: number,
-  firstName: string,
-  lastName: string,
-  cnp: string,
-  address: string,
-  phone: string,
-  employment_date: string,
-  role: string,
-  salary: number
-}

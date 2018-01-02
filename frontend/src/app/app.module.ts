@@ -28,6 +28,7 @@ import { HomeComponent } from './components';
 import { UserComponent } from './components/pages/user/user.component';
 import { EmployeesComponent } from './components/pages/employees/employees.component';
 import { DepartmentsComponent } from './components/pages/departments/departments.component';
+import { BillsComponent } from './components/pages/bills/bills.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DepartmentsComponent } from './components/pages/departments/departments
     HomeComponent,
     UserComponent,
     EmployeesComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    BillsComponent
   ],
   imports: [
     AppRoutingModule,
