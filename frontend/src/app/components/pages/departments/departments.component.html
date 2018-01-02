@@ -1,0 +1,8 @@
+<p-dataTable [value]="departments" selectionMode="single" [(selection)]="selectedDepartment" [contextMenu]="cm" [responsive]="true">
+  
+    <p-column field="id" header="Department id" [sortable]="true"></p-column>
+    <p-column field="name" header="Department name" [sortable]="true"></p-column>
+  
+  </p-dataTable>
+  
+  <p-contextMenu #cm [model]="items"></p-contextMenu>
