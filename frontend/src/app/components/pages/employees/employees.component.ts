@@ -30,7 +30,7 @@ export class EmployeesComponent implements OnInit {
 
   }
   deleteEmployee(select: Employees) {
-    this.apiService.delete('/employees/' + select.id).subscribe(res => {
+    this.apiService.delete('employees/' + select.id).subscribe(res => {
       console.log(res);
     });
   }

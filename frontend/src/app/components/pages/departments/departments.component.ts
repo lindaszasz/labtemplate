@@ -30,7 +30,7 @@ export class DepartmentsComponent implements OnInit {
 
   }
   deleteDepartment(select: Departments) {
-    this.apiService.delete('/departments/' + select.id).subscribe(res => {
+    this.apiService.delete('departments/' + select.id).subscribe(res => {
       console.log(res);
     });
   }

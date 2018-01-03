@@ -30,7 +30,7 @@ export class BillsComponent implements OnInit {
 
   }
   deleteBill(select: Bills) {
-    this.apiService.delete('/bills/' + select.id).subscribe(res => {
+    this.apiService.delete('bills/' + select.id).subscribe(res => {
       console.log(res);
     });
   }
