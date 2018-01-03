@@ -29,6 +29,9 @@ import { UserComponent } from './components/pages/user/user.component';
 import { EmployeesComponent } from './components/pages/employees/employees.component';
 import { DepartmentsComponent } from './components/pages/departments/departments.component';
 import { BillsComponent } from './components/pages/bills/bills.component';
+import { AccomodationsComponent } from './components/pages/accomodations/accomodations.component';
+import { RoomsComponent } from './components/pages/rooms/rooms.component';
+import { ClientsComponent } from './components/pages/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { BillsComponent } from './components/pages/bills/bills.component';
     UserComponent,
     EmployeesComponent,
     DepartmentsComponent,
-    BillsComponent
+    BillsComponent,
+    AccomodationsComponent,
+    RoomsComponent,
+    ClientsComponent
   ],
   imports: [
     AppRoutingModule,
