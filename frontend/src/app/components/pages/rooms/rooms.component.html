@@ -1,3 +1,12 @@
-<p>
-  rooms works!
-</p>
+<p-dataTable [value]="rooms" [(selection)]="selectedRoom" dataKey="id" [responsive]="true" [editable]="true">
+  
+    <p-column selectionMode="multiple"></p-column>
+    <p-column field="id" header="Room id" [sortable]="true"></p-column>
+    <p-column field="roomType" header="Roomtype" [sortable]="true"></p-column>
+    <p-column field="nrAdults" header="No of Adults" [sortable]="true" [editable]="true"></p-column>
+    <p-column field="nrChildrens" header="No of Childrens" [sortable]="true" [editable]="true"></p-column>
+    <p-column field="priceNight" header="Price/night" [sortable]="true" [editable]="true"></p-column>
+   [(selection)]="selectedCars" dataKey="vin"
+  </p-dataTable>
+  
+  <p-contextMenu [model]="items">  </p-contextMenu>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../../service/';
+import { MenuItem } from 'primeng/components/common/menuitem';
 
 @Component({
   selector: 'app-rooms',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
-  constructor() { }
+  title = 'Rooms';
+  
+    rooms: Rooms[];
+    selectedRoom: Rooms;
+    items: MenuItem[];
+    constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.get('rooms/').subscribe(res => {
+      this.rooms = res;
+    });
+    this.items = [
+      { label: 'View', icon: 'fa-search', command: (event) => this.viewRoom(this.selectedRoom) },
+      { label: 'Delete', icon: 'fa-close', command: (event) => this.deleteRoom(this.selectedRoom) }
+    ];
+  }
+  viewRoom(select: Rooms) {
+    console.log(JSON.stringify(select));
+
+  }
+  deleteRoom(select: Rooms) {
+    this.apiService.delete('rooms/' + select.id).subscribe(res => {
+      console.log(res);
+    });
   }
 
+}
+interface Rooms {
+  id: number,
+  roomType: string,
+  nrAdults: number,
+  nrChildrens: number,
+  priceNight: number
 }
