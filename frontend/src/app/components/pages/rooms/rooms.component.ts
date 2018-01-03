@@ -13,6 +13,7 @@ export class RoomsComponent implements OnInit {
   
     rooms: Rooms[];
     selectedRoom: Rooms;
+    stacked: boolean;
     items: MenuItem[];
     constructor(private apiService: ApiService) { }
 
@@ -34,7 +35,9 @@ export class RoomsComponent implements OnInit {
       console.log(res);
     });
   }
-
+  toggle() {
+    this.stacked = !this.stacked;
+}
 }
 interface Rooms {
   id: number,
