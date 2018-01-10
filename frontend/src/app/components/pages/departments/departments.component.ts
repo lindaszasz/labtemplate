@@ -35,6 +35,11 @@ export class DepartmentsComponent implements OnInit {
     });
   }
 
+  onCellEditorKeydown($event, col, rowData, rowIndex){
+    console.log(rowData);
+    
+  }
+
 }
 interface Departments {
   id: number,

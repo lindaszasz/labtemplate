@@ -40,6 +40,6 @@ interface Bills {
   id: number,
   id_employee: number,
   id_client: number,
-  date: string,
+  date: Date,
   amout: number
 }
